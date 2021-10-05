@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_buy_ticket/src/components/backgroundComponent.dart';
 import 'package:movie_buy_ticket/src/components/movieComponet.dart';
+import 'package:movie_buy_ticket/src/widget/customAppBar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -25,6 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
           BackgroundComponent(),
 
           MovieComponent(movieItemWidth),
+
+          //appbar
+          CustomAppbar(),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:movie_buy_ticket/src/models/data.dart';
+import 'package:movie_buy_ticket/src/screen/detailsScreen.dart';
 import 'package:movie_buy_ticket/src/widget/conts.dart';
 import 'package:movie_buy_ticket/src/widget/genresFormet.dart';
 import 'package:movie_buy_ticket/src/widget/ktext.dart';
@@ -52,31 +53,49 @@ class _MovieIndexState extends State<MovieIndex> {
         SizedBox(
           height: 40,
         ),
-        Container(
-          height: 35,
-          width: 90,
-          decoration: BoxDecoration(
-            color: secondary,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Center(
-            child: KText(
-              text: 'BUY TICKET',
-              fontSize: 12,
-              color: Colors.white,
-              fontFamily: 'OpenSans Bold',
+        InkWell(
+          onTap: () => Navigator.push(
+              context,
+              PageRouteBuilder(
+                  pageBuilder: (context, a1, a2) => DetailsScreen(
+                        movie: movieData.movieList[widget.index],
+                        size: size,
+                      ))),
+          child: Container(
+            height: 35,
+            width: 90,
+            decoration: BoxDecoration(
+              color: secondary,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(
+              child: KText(
+                text: 'BUY TICKET',
+                fontSize: 12,
+                color: Colors.white,
+                fontFamily: 'OpenSans Bold',
+              ),
             ),
           ),
         ),
         SizedBox(
           height: 5,
         ),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(50.0),
-          child: Image(
-            image: movieData.movieList[widget.index].image.image,
-            width: size.width * 0.5,
-            height: size.height * 0.30,
+        GestureDetector(
+          onTap: () => Navigator.push(
+              context,
+              PageRouteBuilder(
+                  pageBuilder: (context, a1, a2) => DetailsScreen(
+                        movie: movieData.movieList[widget.index],
+                        size: size,
+                      ))),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(50.0),
+            child: Image(
+              image: movieData.movieList[widget.index].image.image,
+              width: size.width * 0.5,
+              height: size.height * 0.30,
+            ),
           ),
         ),
         Column(
