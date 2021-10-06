@@ -23,8 +23,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
             // details page bg image
             background: widget.movie.image,
           ),
-
-          // Bottom sheet
         ],
       ),
     );
