@@ -9,6 +9,7 @@ import 'package:movie_buy_ticket/src/widget/rating.dart';
 
 class MovieIndex extends StatefulWidget {
   final int index;
+
   final double movieItemWidth;
 
   MovieIndex(
@@ -59,7 +60,6 @@ class _MovieIndexState extends State<MovieIndex> {
               PageRouteBuilder(
                   pageBuilder: (context, a1, a2) => DetailsScreen(
                         movie: movieData.movieList[widget.index],
-                        size: size,
                       ))),
           child: Container(
             height: 35,
@@ -87,7 +87,6 @@ class _MovieIndexState extends State<MovieIndex> {
               PageRouteBuilder(
                   pageBuilder: (context, a1, a2) => DetailsScreen(
                         movie: movieData.movieList[widget.index],
-                        size: size,
                       ))),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(50.0),

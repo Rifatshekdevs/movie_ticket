@@ -28,15 +28,15 @@ class MovieData {
               photo: Image.asset("assets/images/cast/willem.jpg"),
             ),
             MovieCast(
-              name: "Julianne Nicholson",
+              name: "Julianne\n Nicholson",
               photo: Image.asset("assets/images/cast/julianne.jpg"),
             ),
             MovieCast(
-              name: "Christopher Heyerdahl",
+              name: "Christopher\n Heyerdahl",
               photo: Image.asset("assets/images/cast/christopher.jpg"),
             ),
             MovieCast(
-              name: "Michael McElhatton",
+              name: "Michael\n McElhatton",
               photo: Image.asset("assets/images/cast/michael.jpg"),
             )
           ]),
