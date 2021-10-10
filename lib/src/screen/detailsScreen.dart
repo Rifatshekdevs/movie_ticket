@@ -200,7 +200,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                 SizedBox(
                                   height: 30,
                                 ),
-                                BuyButtom(),
+                                BuyButtom(widget.movie.name),
                               ],
                             ),
                           ),
